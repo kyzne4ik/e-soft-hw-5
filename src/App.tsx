@@ -4,6 +4,7 @@ import { ThemeProvider, ThemeSwitcherButton } from "./tasks/1.1.UseContext";
 import { Counter } from "./tasks/1.2.UseCallback";
 import { HardCalculate } from "./tasks/1.3.UseMemo";
 import { ControlledMiniForma } from "./tasks/1.4.UseRef";
+import { TodoList } from "./tasks/1.5.UseReducer";
 
 function AppProviders({ children }: { children: ReactNode }) {
   return <ThemeProvider>{children}</ThemeProvider>;
@@ -33,6 +34,12 @@ function App() {
           <ControlledMiniForma />
         </div>
       </div>
+
+      <div className="1.5-use-reducer">
+        <p>1.5. useReducer — Todo List</p>
+        <TodoList />
+      </div>
+      
     </AppProviders>
   );
 }
