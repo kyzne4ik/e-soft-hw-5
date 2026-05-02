@@ -5,6 +5,7 @@ import { Counter } from "./tasks/1.2.UseCallback";
 import { HardCalculate } from "./tasks/1.3.UseMemo";
 import { ControlledMiniForma } from "./tasks/1.4.UseRef";
 import { TodoList } from "./tasks/1.5.UseReducer";
+import { TodoListBonus } from "./tasks/1.7.Bonus";
 import { Parent } from "./tasks/1.6.React.memo";
 
 function AppProviders({ children }: { children: ReactNode }) {
@@ -47,6 +48,11 @@ const RENDER_TASKS: RenderTasksType = [
     buttonText: "1.6-react-memo",
     paragraph: "1.6. React.memo — Оптимизация рендеринга",
     component: <Parent />,
+  },
+  {
+    buttonText: "1.7-bonus",
+    paragraph: "1.7. Бонус — Комбинирование хуков",
+    component: <TodoListBonus />,
   },
 ];
 
