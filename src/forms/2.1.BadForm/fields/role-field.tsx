@@ -1,24 +1,15 @@
-import { useState, type ChangeEventHandler } from "react";
+import type { SelectHTMLAttributes } from "react";
 
-type Role = "преподаватель" | "студент";
+export type Role = "преподаватель" | "студент";
 
-export function RoleField({ error }: { error?: string }) {
-  const [role, setRole] = useState<Role | null>(null);
-
-  const handleChange: ChangeEventHandler<HTMLSelectElement> = (e) => {
-    setRole(e.target.value as Role);
-  };
-
+export function RoleField(props: SelectHTMLAttributes<HTMLSelectElement>) {
   return (
-    <div>
-      <select name="role" value={role || ""} onChange={handleChange}>
-        <option value="" selected hidden disabled>
-          Выбирите роль...
-        </option>
-        <option value="студент">студент</option>
-        <option value="преподаватель">преподаватель</option>
-      </select>
-      <p style={{ color: "red" }}>{error}</p>
-    </div>
+    <select name="role" {...props}>
+      <option value="" selected hidden disabled>
+        Выбирите роль...
+      </option>
+      <option value="студент">студент</option>
+      <option value="преподаватель">преподаватель</option>
+    </select>
   );
 }
