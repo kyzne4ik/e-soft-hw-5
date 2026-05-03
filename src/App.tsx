@@ -9,6 +9,7 @@ import { TodoListBonus } from "./tasks/1.7.Bonus";
 import { Parent } from "./tasks/1.6.React.memo";
 import { BadForm } from "./forms/2.1.BadForm";
 import { GoodFormRHK } from "./forms/2.2.GoodFormRHK";
+import { GoodFormFormik } from "./forms/2.3.GoodFormFormik";
 
 function AppProviders({ children }: { children: ReactNode }) {
   return <ThemeProvider>{children}</ThemeProvider>;
@@ -65,6 +66,11 @@ const RENDER_TASKS: RenderTasksType = [
     buttonText: "2.2-goof-form-rhk",
     paragraph: "2.2. «Хорошая» форма — React Hook Form + Zod",
     component: <GoodFormRHK />,
+  },
+  {
+    buttonText: "2.3-goof-formik",
+    paragraph: "2.3. Альтернативный вариант — Formik + Yup",
+    component: <GoodFormFormik />,
   },
 ];
 
