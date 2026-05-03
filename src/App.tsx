@@ -7,6 +7,7 @@ import { ControlledMiniForma } from "./tasks/1.4.UseRef";
 import { TodoList } from "./tasks/1.5.UseReducer";
 import { TodoListBonus } from "./tasks/1.7.Bonus";
 import { Parent } from "./tasks/1.6.React.memo";
+import { BadForm } from "./forms/2.1.BadForm";
 
 function AppProviders({ children }: { children: ReactNode }) {
   return <ThemeProvider>{children}</ThemeProvider>;
@@ -53,6 +54,11 @@ const RENDER_TASKS: RenderTasksType = [
     buttonText: "1.7-bonus",
     paragraph: "1.7. Бонус — Комбинирование хуков",
     component: <TodoListBonus />,
+  },
+  {
+    buttonText: "2.1-bad-form",
+    paragraph: "2.1. «Плохая» форма — разберите проблемы",
+    component: <BadForm />,
   },
 ];
 
